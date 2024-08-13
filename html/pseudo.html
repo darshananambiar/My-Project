@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p::first-line{
+            background-color: blue;
+            color: aquamarine;
+        }
+        h2::first-letter{
+            background-color: brown;
+            color: black;
+        }
+        h3::before{
+            content: "hello ";
+        }
+        h3::after{
+            content:" cybersquare";
+        }
+        p::selection{
+            background-color: brown;
+            color: black;
+        }
+        
+    </style>
+</head>
+<body>
+    <h2>hello world</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa vitae in esse provident quaerat enim odio quod a debitis accusamus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi obcaecati atque commodi error. Laborum nemo possimus voluptas facere quam vitae!</p>
+    <h3>welcome</h3>
+</body>
+</html>

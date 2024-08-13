@@ -1,0 +1,38 @@
+flex container
+--------------
+
+justify content main axis (center,flex-start,flex-end,space- around,space between,space-evenly)
+
+align items cross axis(flex start,flex end,stretch)
+
+align content--align flex lines, cross axis(center,flex-start,flex-end,space- around,space between,,stretch,space-evenly)
+
+perfect centering-
+
+justify-content:center;
+
+align-items:center;
+
+
+
+flex child properties
+--------------------
+
+<div style order:"">
+
+<div style flex-grow:"">
+
+<div style flex-shrink:"">  (default value 1)
+
+<div style="flex-basis: 200px;">
+
+<div style="flex:<flex-grow> <flex-shrink> <flex-basis>">
+
+shorthand property of flex-grow, flex-shrink, and flex-basis
+
+<div style="align-self: flex-end;">
+
+center, flex-start, flex-end
+
+
+

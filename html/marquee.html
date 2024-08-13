@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* h2{
+            background-color: blueviolet;
+            color: white;
+        } */
+         #container{
+            display: flex;
+            justify-content: flex-start;
+            background-color: blue;
+            color: aliceblue;
+         }
+         h1{
+            text-transform: capitalize;
+            font-size:40px;
+            letter-spacing:1px ;
+            animation: move-rtl 6000ms linear infinite;
+         }
+         @keyframes move-rtl {
+            100% {
+                transform: translateX(-100%);
+            }
+         }
+    </style>
+</head>
+<body>
+    <!-- <marquee direction="down">
+        <h2>Welcome to cybersqaure</h2>
+    </marquee> -->
+
+    <div id="container">
+        <h1>welcome to cybersqaure</h1>
+        <h1>welcome to cybersqaure</h1>
+        <h1>welcome to cybersqaure</h1>
+        <h1>welcome to cybersqaure</h1>
+
+    </div>
+</body>
+</html>

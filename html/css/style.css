@@ -1,0 +1,20 @@
+*{
+    background-color: blanchedalmond;
+    color: brown;
+}
+#heading{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: brown;
+}
+#paragraph{
+    font-variant: small-caps;
+    color: blue;
+}
+.heading{
+    color: aqua;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.para3{
+    color: blueviolet;
+
+}

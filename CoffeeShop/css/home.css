@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+}
+
+header{
+    background-color: black;
+    color: aliceblue;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+ul{
+    display: flex;
+
+}
+ul li{
+    list-style: none;
+    margin-left: 20px;
+}
+ul li a {
+    text-decoration: none;
+    color: white;
+    font-family:Arial, Helvetica, sans-serif;
+    
+}
+a:hover {
+    color: rgb(211, 95, 1);
+}
+.coffehome{
+    background-image: url(/images/banner-bg\ \(1\).png);
+    height:455px;
+    width: 1500px;
+    
+}
+.banner-txt{
+    margin-left: 50px;
+    margin-top: 70px;
+}
+div .heading1 {
+    font-size:smaller;
+    font-family: 'Times New Roman', Times, serif;
+    color: aliceblue;
+    font-weight: lighter;
+    justify-content:center ;
+   
+
+
+}
