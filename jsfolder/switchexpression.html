@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var age =prompt("Enter the age of the person ");
+        switch(true){
+            case age < 13:
+            document.write("Person is a child");
+            break;
+            case age>=13 && age <= 19:
+            document.write("Person is a teenager");
+            break;
+            case age >=20 && age <=64:
+            document.write("Person is a adult");
+            break;
+            case age >= 65:
+            document.write("Person is a senior");
+            break;
+            default:
+                document.write("invalid age");
+        }
+    </script>
+</body>
+</html>

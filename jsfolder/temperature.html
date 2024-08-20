@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var celsius = prompt("enter the temperature in celcius");
+        var fahrenheit = (celsius * 9/5) + 32;
+       if (fahrenheit < 32 ) {
+        document.write("It's freezing!");
+         } 
+     else if (fahrenheit >= 32 && fahrenheit < 60) {
+        document.write("It's cold.");
+    } else if (fahrenheit >= 60 && fahrenheit < 80) {
+        document.write("It's warm.");
+    } else {
+        document.write("It's hot!");
+    }
+
+    </script>
+</body>
+</html>

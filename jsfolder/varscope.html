@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function scope(){
+          var  user ="baabtra";
+          console.log("user inside the function "   +user) ;
+          if(true){
+           var age = "10";
+            console.log("user inside the function "  +age) ;
+            console.log("user inside the function "  +user) ;
+          }
+          console.log("age after the function "  +age) ;
+        }
+        scope()
+        console.log("age outside  the function "  +age) ;
+        console.log("user outside the function "  +user) ;
+
+    </script>
+</body>
+</html>

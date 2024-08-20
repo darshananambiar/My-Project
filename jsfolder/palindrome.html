@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function palindrome(string){
+          var array = string.split('');
+                 var reverse =array.reverse();
+                   var reverseString   = reverse.join('');
+                   if(string== reverseString){
+                    document.write("given string is palindrome");
+                   }
+                   else{
+                    document.write("given string is not palindrom");
+                   }
+
+        }
+        var string = prompt("enter the string");
+        palindrome(string)
+
+    </script>
+</body>
+</html>

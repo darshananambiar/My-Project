@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+<style>
+body {
+     font-family: 'Times New Roman', Times, serif;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     background-color: white;
+}
+/* h1{
+  color: brown;
+  align-items: center;
+  justify-content: center; */
+/* } */
+.calculator{
+  background-color: black;
+  color: aliceblue;
+  width: 200px;
+  height: 350px;
+  padding: 20px;
+  border: 2px solid black;
+}
+ .display{
+  width: 200px;
+  height: 50px;
+  text-align: right;
+  font-size: medium;
+  border:2px solid black;
+  color: black;
+ }  
+ .button{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 10px;
+ }
+ .button button{
+  padding: 15px;
+  font-size: medium;
+  background-color: aliceblue;
+  border: none;
+
+ }
+</style>
+</head>
+<body>
+    
+    <div class ="calculator">
+      <input type="text" id="display" class="display" disabled>
+      <div class ="button">
+        <button onclick="appendNumber('7')">7</button>
+        <button onclick="appendNumber('8')">8</button>
+        <button onclick="appendNumber('9')">9</button>
+        <button onclick="appendNumber('7')">7</button>
+        <button onclick="appendNumber('/')">/</button>
+        <button onclick="appendNumber('4')">4</button>
+        <button onclick="appendNumber('5')">5</button>
+        <button onclick="appendNumber('6')">6</button>
+        <button onclick="appendNumber('*')">*</button>
+        <button onclick="appendNumber('1')">1</button>
+        <button onclick="appendNumber('2')">2</button>
+        <button onclick="appendNumber('3')">3</button>
+        <button onclick="appendNumber('-')">-</button>
+        <button onclick="appendNumber('0')">0</button>
+        <button onclick="clearDisplay()">C</button>
+        <button onclick="calculateResult()">=</button>
+        <button onclick="appendNumber('+')">+</button>
+        
+      </div>
+      </div>
+<script>
+
+  const display=document.getElementById('display');
+  function appendNumber(number){
+    display.value += number;
+
+  }
+  function calculateResult(){
+    display.value= eval(display.value);
+  }
+ function clearDisplay(){
+  display.value = 0;
+ }
+  // var num1 =parseInt(prompt("Enter the first number"));
+  // var num2 =parseInt(prompt("Enter the second number"));
+
+  // function sum(){
+  //   var sum= num1 + num2;
+  //   document.write(`Addition = ${sum}`);
+  // }
+  // sum()
+  // document.write("<br>") ;
+
+  // function sub(){
+  //   var sub= num1 - num2;
+  //   document.write(`Subtraction = ${sub}`);
+  // }
+  // sub()
+
+  // document.write("<br>") ;
+
+  // function mul(){
+  //   var mul= num1 * num2;
+  //   document.write(`multiplication = ${mul}`);
+  // }
+  // mul()
+
+  // document.write("<br>") ;
+
+  // function div(){
+  //   var div= num1 * num2;
+  //   document.write(`Division= ${div}`);
+  // }
+</script>
+    
+</body>
+</html>

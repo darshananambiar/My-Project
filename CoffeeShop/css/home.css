@@ -9,6 +9,7 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    
 
 }
 ul{
@@ -29,22 +30,58 @@ a:hover {
     color: rgb(211, 95, 1);
 }
 .coffehome{
-    background-image: url(/images/banner-bg\ \(1\).png);
+    background-image: url(/images/banner.png);
     height:455px;
-    width: 1500px;
+    width: 1000px;
+    padding-top: 60px;
     
 }
 .banner-txt{
     margin-left: 50px;
-    margin-top: 70px;
+    /* margin-top: 70px; */
 }
 div .heading1 {
-    font-size:smaller;
+    font-size:20px;
     font-family: 'Times New Roman', Times, serif;
-    color: aliceblue;
-    font-weight: lighter;
+    color:black;
+    font-weight:50px;
     justify-content:center ;
+    font-family: 'Times New Roman', Times, serif;
+    
    
 
 
 }
+div.heading2{
+    font-size: medium;
+    color: aliceblue;
+    font-weight:bolder;
+    font-size: xx-large;
+    font-family:'Times New Roman', Times, serif;
+
+}
+div.para1{
+    color: aliceblue;
+    padding-top: 20px;
+    font-family: 'Times New Roman', Times, serif
+}
+button{
+    background-color: black;
+    color: aliceblue;
+    margin-top: 30px;
+}
+button:hover{
+    background-color:orange;
+    color:white
+}
+footer {
+    background-color: black;
+    color: aliceblue;
+}
+
+
+
+
+
+
+

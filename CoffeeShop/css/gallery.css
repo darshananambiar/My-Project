@@ -1,0 +1,50 @@
+header{
+    background-color: black;
+    color: aliceblue;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Times New Roman', Times, serif;
+    
+
+}
+ul{
+    display: flex;
+
+}
+ul li{
+    list-style: none;
+    margin-left: 20px;
+}
+ul li a {
+    text-decoration: none;
+    color: white;
+    font-family:'Times New Roman', Times, serif;
+    
+}
+a:hover {
+    color: rgb(211, 95, 1);
+}
+.imagegallery{
+    display: grid;
+    grid-template-columns: 200px 200px 200px;
+    grid-template-rows: auto auto auto;
+    grid-gap: 20px;
+    justify-content: center;
+    
+
+}
+.imagegallery > div {
+    background-color: aliceblue;
+}
+h1{
+    color: chocolate;
+    align-content: center;
+    //margin-left: 400px;
+  
+}
+p{
+    color: black;
+    align-items: center;
+}

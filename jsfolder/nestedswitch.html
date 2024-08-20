@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var vehicleType = prompt(" 'car' , 'bike' , truck' ");
+        var fuelType = prompt(" 'petrol' , 'diesel' , 'electric' ");
+        switch (vehicleType) {
+            case "car":
+                switch (fuelType) {
+                    case "petrol":
+                        document.write("petrol car");
+                        break;
+                    case "diesel":
+                        document.write("diesel car");
+                        break;
+
+                    case "electric":
+                        document.write("electric car");
+                        break;
+                }
+                break;
+            case "bike":
+                switch (fuelType) {
+                    case "petrol":
+                        document.write("petrol bike");
+                        break;
+                    case "diesel":
+                        document.write("diesel bike");
+                        break;
+
+                    case "electric":
+                        document.write("electric bike");
+                        break;
+                }
+
+                    break;
+
+            case "truck":
+                switch (fuelType) {
+                    case "petrol":
+                        document.write("petrol truck");
+                        break;
+                    case "diesel":
+                        document.write("diesel truck");
+                        break;
+
+                    case "electric":
+                        document.write("electric truck");
+                        break;
+                }
+                break;
+            default:
+                document.write("invalid input");
+
+
+        }
+    </script>
+</body>
+
+</html>
