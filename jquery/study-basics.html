@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1><u>My Home</u></h1>
+    <p id="father">My father is chandran</p>
+    <p class="mother">My mother is jayasudha</p>
+    <p class="sister">My sibling is anjana</p>
+    <button id="hide">HIDE</button>
+    <button id="show">SHOW</button>
+   <button id="togle">SHOW</button>
+    
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script> 
+    <script>
+        $(document).ready(function() {
+            $("h1").css("color","red");
+            $("#father").css("backgroundColor","green");
+            $(".mother").css("backgroundColor","blue");
+            $(".sister").css("backgroundColor","yellow");
+            $("#hide").click ( ()=>{
+                // $("#father").hide();
+                // $(".mother").hide();
+                // $
+                $("h1, #father, .mother, .sister").hide();
+            });
+
+            
+                $("#show").click ( ()=>{
+                $("h1, #father, .mother, .sister").show();
+            });
+
+            
+            $("#togle").click ( ()=>{
+                $("h1, #father, .mother, .sister").togle();
+            });
+            
+            
+
+        });
+    </script>  
+</body>
+</html>

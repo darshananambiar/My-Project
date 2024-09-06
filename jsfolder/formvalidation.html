@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comprehensive Form Validation</title>
+</head>
+<body>
+  <!-- Simple form with name, email, password, and confirm password fields -->
+  <form id="myForm">
+    <label for="name">Name:</label><br>
+    <input type="text" id="name" name="name"><br><br>
+    
+    <label for="email">Email:</label><br>
+    <input type="text" id="email" name="email"><br><br>
+    
+    <label for="password">Password:</label><br>
+    <input type="password" id="password" name="password"><br><br>
+    
+    <label for="confirmPassword">Confirm Password:</label><br>
+    <input type="password" id="confirmPassword" name="confirmPassword"><br><br>
+    
+    <button type="submit" id="submit">Submit</button>
+  </form>
+
+  <script>
+    // Function to validate the form
+    function validateForm(event) {
+      // Prevent the default form submission
+      event.preventDefault();
+
+      // Get the values of the input fields
+      const name = document.getElementById("name").value;
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
+      const confirmPassword = document.getElementById("confirmPassword").value;
+
+      // Validation checks
+
+      // Check if the name field is empty
+      if (name === "") {
+        alert("Name is required.");
+        return false; // Stop form submission
+      }
+
+      // Check if the email field is empty
+      if (email === "") {
+        alert("Email is required.");
+        return false; // Stop form submission
+      }
+
+      // Check if the email format is valid
+      const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+      if (!emailPattern.test(email)) {
+        alert("Please enter a valid email address.");
+        return false; // Stop form submission
+      }
+
+      // Check if the password field is empty
+      if (password === "") {
+        alert("Password is required.");
+        return false; // Stop form submission
+      }
+
+      // Check if the password is at least 6 characters long
+      if (password.length < 6) {
+        alert("Password must be at least 6 characters long.");
+        return false; // Stop form submission
+      }
+
+      // Check if the password contains at least one uppercase letter, one lowercase letter, one digit, and one special character
+      const passwordPattern = /^(?=.[a-z])(?=.[A-Z])(?=.\d)(?=.[@$!%?&])[A-Za-z\d@$!%?&]{6,}$/;
+      if (!passwordPattern.test(password)) {
+        alert("Password must contain at least one uppercase letter, one lowercase letter, one digit, and one special character.");
+        return false; // Stop form submission
+      }
+
+      // Check if the confirm password field matches the password
+      if (confirmPassword !== password) {
+        alert("Passwords do not match.");
+        return false; // Stop form submission
+      }
+
+      // If all validations pass, allow form submission
+      alert("Form submitted successfully!");
+      return true;
+    }
+
+    // Attach the validateForm function to the form's submit event
+    document.getElementById("myForm").addEventListener("submit", validateForm);
+  </script>
+</body>
+</html>

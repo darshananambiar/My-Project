@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grocery Cart</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <section class="products" id="products">
+        <h1 class="heading">Our <span>Products</span> </h1>
+        <div class=" product-slider">
+            <div class="wrapper">
+                <div class=" box">
+                    <img src="/imagefarmfresh/orange1.avif" alt="orange">
+                    <h1>Fresh Orange</h1>
+                    <div class="price">Rs 200</div>
+                    <div class="stars">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half"></i>
+                    </div>
+                    <a href="" class="btn">Add To Cart</a>
+                </div>
+
+                <div class=" box">
+                    <img src="/imagefarmfresh/leafy2.avif" alt="leaf">
+                    <h1>Leafy Vegetables</h1>
+                    <div class="price">Rs 20</div>
+                    <div class="stars">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                    <a href="" class="btn">Add To Cart</a>
+                </div>
+
+                <div class="box">
+                    <img src="/imagefarmfresh/egg.avif" alt="egg" width="300px">
+                    <h1>Egg</h1>
+                    <div class="price">Rs 100</div>
+                    <div class="stars">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                    <a href="" class="btn">Add To Cart</a>
+                </div>
+
+                <div class="box">
+                    <img src="/imagefarmfresh/milk bottle.avif" alt="milk">
+                    <h1>Milk</h1>
+                    <div class="price">Rs 30</div>
+                    <div class="stars">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half"></i>
+                    </div>
+                    <a href="" class="btn">Add To Cart</a>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="product-slider">
+            <div class="wrapper">
+                <div class=" box">
+                    <img src="/imagefarmfresh/orange1.avif" alt="orange">
+                    <h1>Fresh Orange</h1>
+                    <div class="price">Rs 200</div>
+                    <div class="stars">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half"></i>
+                    </div>
+                    <a href="" class="btn">Add To Cart</a>
+                </div>
+
+                <div class=" box">
+                    <img src="/imagefarmfresh/leafy2.avif" alt="leaf">
+                    <h1>Leafy Vegetables</h1>
+                    <div class="price">Rs 20</div>
+                    <div class="stars">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half"></i>
+                    </div>
+                    <a href="" class="btn">Add To Cart</a>
+                </div>
+
+                <div class=" box">
+                    <img src="/imagefarmfresh/onion.avif" alt="egg">
+                    <h1>Onion</h1>
+                    <div class="price">Rs 100</div>
+                    <div class="stars">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half"></i>
+                    </div>
+                    <a href="" class="btn">Add To Cart</a>
+                </div>
+
+                <div class=" box">
+                    <img src="/imagefarmfresh/grapes.avif" alt="milk">
+                    <h1>Milk</h1>
+                    <div class="price">Rs 30</div>
+                    <div class="stars">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half"></i>
+                    </div>
+                    <a href="" class="btn">Add To Cart</a>
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </section>
+
+
+    <script>
+
+       
+
+    <script src="script.js"></script>
+</body>
+</html>

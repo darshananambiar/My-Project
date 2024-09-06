@@ -1,0 +1,570 @@
+:root{
+    --green:green;
+    --black:#130f40;
+    --light-color:#666;
+    --box-shadow:0.5rem 1.5rem rgba(0,0,0,0.1);
+    --border: 2rem solid rgba(0,0,0,1);
+    --border: 0.1rem solid rgba(0,0,0,1);
+    --outline:grey ;
+}
+
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+outline: none;
+border: none;
+text-decoration: none;
+text-transform: capitalize;
+font-family: sans-serif;
+
+}
+body{
+    background-color:grey;
+
+}
+.btn{
+    border:1px solid black;
+    margin-top: 1rem;
+    display:inline-block;
+    padding: 0.8rem 3rem;
+    font-size: 1.7rem;
+    border-radius:0.5rem ;
+    color: black;
+    cursor: pointer;
+    background: none;
+}
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 7rem;
+
+}
+
+.btn:hover{
+    background-color: green;
+}
+.header{
+    /* background-color:white; */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    height: 14%;
+    justify-content: space-between;
+    padding:1rem 9%;
+    background:black;
+    border: 0px,solid black;
+}
+
+.header .logo{
+    font-size: 2.5rem;
+    font-weight: bolder;
+    text-decoration: none;
+   
+
+}
+.header .logo i{
+    color: var(--green);
+}
+.header .navbar a{
+    font-size: 1.7rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    color: white;
+    text-decoration: none;
+
+}
+.header .navbar a:hover{
+    color:green;
+}
+.header .icons div{
+    height:4.5rem;
+    width:4.5rem;
+    line-height: 4.5rem;
+    border-radius: 0.5rem;
+    background-color:#eee;
+    color: black;
+    font-size: 2rem;
+    margin-right: 0.3rem;
+    text-align: center;
+    cursor: pointer;
+}
+.header .icons div:hover{
+    background-color: green;
+    color: #fff;
+}
+.icons{
+    padding-left: 1rem;
+    align-content: center;
+}
+#menu-btn{
+    display: none;
+}
+.header .search-form {
+    border:0px solid;
+    position:absolute;
+    top:110%;
+    right:-110%;
+    width:50rem;
+    height:5rem;
+    background:white
+    border-radius: 0.5rem;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.header .search-form.active{
+     right:2rem;
+     transition: .4s linear;
+}
+.header .search-form input{
+    height:100%;
+    width:100%;
+    background: none;
+    text-transform:none;
+    font-size: 1.6rem;
+    color: black;
+    padding:0 1.5rem;
+}
+.header .search-form  label{
+    font-size: 2.2rem;
+    padding-right: 1.5rem;
+    color: black;
+    cursor: pointer;
+
+}
+.header .search-form  label:hover{
+    color:green ;
+}
+.header .shopping-cart{
+    border: 0.1px solid;
+    position: absolute;
+    top: 100%;
+    right:-110%;
+    padding: 1rem;
+    border-radius: 1.5rem;
+    width:35rem;
+    background:white
+}
+/* -------active cart ----- */
+.header .shopping-cart.active{
+   right: 2rem;
+   transition: .4s linear;
+
+}
+.header .shopping-cart .box{
+    border: 0px solid blue;
+    display: flex;
+    align-items: center;
+    gap: -3rem;
+    position: relative;
+    margin: 1rem 0;
+}
+.header .shopping-cart .box img{
+    height: 10rem;
+}
+.header .shopping-cart .box  .fa-trash{
+    font-size: 2rem;
+    position: absolute;
+    top:50%;
+    right:2rem;
+    cursor: pointer;
+    color:grey;
+    transform: translateY(-50%);
+}
+.header .shopping-cart .box  .fa-trash:hover{
+    color: green;
+
+}
+.header .shopping-cart .box  .content h3{
+    color:black;
+    font-size: 1.7rem;
+    padding-bottom: 1rem;
+}
+.header .shopping-cart .box  .content span{
+    color:grey;
+    font-size: 1.3rem;
+    padding-bottom: 1rem;
+
+}
+.header .shopping-cart .box  .content .quantity{
+    padding-left: 2rem;
+}
+.header .shopping-cart .total{
+    font-size: 2rem;
+    padding: 1rem 0;
+    text-align: center;
+    color:black;
+
+}
+.header .shopping-cart  .btn{
+    display: block;
+    text-align: center;
+    margin: 1rem 0;
+    color: #eee;
+    background: green;
+    width: 320px;
+   margin:1rem 0;
+}
+.header .login-form{
+
+  border:0px solid;
+  width: 35rem;
+  position: absolute;
+  top:110%;
+  right:-110rem;
+  padding: 0.2rem;
+  border-radius: 0.5rem;
+  background-color:white;
+  text-align: center;
+
+}
+.header .login-form.active{
+    right: 2rem;
+    transition: 0.4s linear;
+
+}
+.header .login-form h3{
+  margin-top: 2rem;
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: black;
+
+
+}
+.header .login-form .box{
+    width: 30;
+    border: 0px solid;
+    margin: 0.7rem 0;
+    background: #eee;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    font-size: 1.6rem;
+    color: black;
+    text-transform: none;
+}
+.header .login-form .btn{
+width:100px;
+color: black;
+background-color: green;
+margin-bottom: 2rem;
+
+}
+/* ......section........ */
+
+section{
+    padding:10rem 9%;
+    
+}
+.home{
+    border: 0px solid black;
+   display: flex;
+   justify-content: center;
+   /* background-image: url(/image/banner-img.jpg ) ;  */
+   background-image: url(/imagefarmfresh/background4.avif);
+   min-height: 100vh;
+   background-position: center;
+   background-size:cover;
+   padding-top: 25rem;
+/* padding-bottom: 3rem; */
+   background-repeat:no-repeat;
+   
+    
+
+} 
+
+.home .content{
+    border:0px solid white;
+    text-align: center;
+    width: 60rem;
+    height: 20rem;
+    padding-top: 1rem;
+    /* background-color:rgb(187, 184, 184) */
+}
+.home .content h1{
+    color:orangered;
+    font-size: 3rem;
+    /* padding-top:1rem; */
+}
+.home .content h1 span{
+    color:greenyellow
+}
+.home .content p{
+    padding: 1rem 0;
+    color:black;
+    line-height: 3;
+    letter-spacing: 0.1rem;
+    font-size: 10 rem;
+    font-family: sans-serif;
+}
+.home .content .btn{
+    
+        border:0px solid black;
+        /* margin-top: 1rem; */
+        display:inline-block;
+        padding: 0.8rem 3rem;
+        font-size: 1.7rem;
+        border-radius:0.5rem ;
+        color:white;
+        cursor: pointer;
+        background:green;
+    }
+    /* -----------------features----------------- */
+    .features{
+        background:white;
+        /* padding-top: 20px; */
+    }
+    
+    .heading{
+        text-align: center;
+        padding:1rem 0;
+        padding-bottom: 4rem;
+        padding-top: 2rem;
+        font-size: 3.5rem;
+        color: black;
+        
+     }
+     .heading span{
+        background: green;
+        color:#fff;
+        display: inline-block;
+        padding: 0.5rem 3rem;
+        
+     }
+     .features .box-container{
+        border:0px solid black;
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(30rem,1fr));
+        gap:1.5rem;
+        
+        
+
+     }
+     .features .box-container .box{
+        border:0px solid black;
+        height: 340px;
+        padding:3rem,2rem;
+        background:white;
+        outline:#666;
+        outline-offset: -1rem;
+        text-align: center;
+        box-shadow: var(--box-shadow);
+        border-radius: 1rem;
+
+     }
+     .features .box-container .box:hover{
+        box-shadow: 1px 1px 10px 4px  var(--green);
+     }
+     .features .box-container .box img{
+        margin:2rem 0;
+        height:10rem;
+     }
+     .features .box-container .box h3{
+        font-size: 2.5rem;
+        line-height: 1.8;
+        color: black;
+     }
+     .features .box-container .box p{
+        font-size: 1rem;
+        line-height: 1.8;
+        color:black;
+        padding: 1rem 0;
+     }
+     .features .box-container .box .btn{
+        border:0px solid black;
+        /* margin-top: 1rem; */
+        display:inline-block;
+        padding: 0.8rem 3rem;
+        font-size: 1.7rem;
+        border-radius:0.5rem ;
+        color:white;
+        cursor: pointer;
+        background:green;
+    }
+     /*---------------------products-----------  */
+.products .product-slider{
+        border:1px solid black;
+        padding :1rem;
+        
+}
+.products .product-slider:first-child{
+    margin-bottom: 2rem;
+    
+}
+.products .product-slider .box{
+    border:0px solid red;
+    background: #fff;
+    border-radius: 0.5rem;
+    text-align: center;
+    padding:3rem 2rem;
+    outline-offset: -1rem;
+    outline:var(--outline);
+    box-shadow: var(--box-shadow);
+    transition: 0.2s linear;
+
+}
+.products .product-slider .box:hover{
+    box-shadow: 1px 1px 10px 4px  var(--green);
+
+}
+.products .product-slider .box img{
+    height: 20rem;
+
+}
+.products .product-slider .box  h1{
+    font-size: 2.5rem;
+    color:black;
+
+}
+.products .product-slider .box .price {
+        font-size:2rem;
+        color:var(--light-color);
+        padding: 0.5rem 0;
+ }
+ .products .product-slider .box  .stars  i{
+    font-size: 1.7rem;
+    color:orange;
+    padding: 0.5rem 0;
+ } 
+ .products .product-slider .box .btn{
+    border:0px solid black;
+    /* margin-top: 1rem; */
+    display:inline-block;
+    padding: 0.8rem 3rem;
+    font-size: 1.7rem;
+    border-radius:0.5rem ;
+    color:white;
+    cursor: pointer;
+    background:green;
+
+ }
+ /* ---------product category-------- */
+ .categories .box-container{
+    border:0px solid black;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(20rem,1fr));
+    gap:1.5rem;
+ }
+ .categories .box-container .box{
+    padding: 3rem 0;
+    background: #eee;
+    border-radius: 0.5rem;
+    box-shadow: var(--box-shadow);
+ }
+ .categories .box-container .box img{
+    margin:2rem 0;
+    height:10rem;
+    width: 17rem;
+ }
+ .categories .box-container .box{
+    border:0px solid black;
+    height: 340px;
+    padding:3rem,2rem;
+    background:white;
+    outline:#666;
+    outline-offset: -1rem;
+    text-align: center;
+    box-shadow: var(--box-shadow);
+    border-radius: 1rem;
+  
+ }
+ .categories .box-container .box:hover{
+    box-shadow: 1px 1px 10px 4px  var(--green);
+ }
+ .categories.box-container .box h3{
+    font-size: 2.5rem;
+    line-height: 1.8;
+    color: #eee;
+ }
+ .categories.box-container .box p{
+    font-size: 1.7rem;
+    line-height: 1.8;
+    color: #eee;
+    padding: 1rem 0;
+ }
+ .categories .box-container .box .btn{
+    border:0px solid black;
+    /* margin-top: 1rem; */
+    display:inline-block;
+    padding: 0.8rem 3rem;
+    font-size: 1.7rem;
+    border-radius:0.5rem ;
+    color:white;
+    cursor: pointer;
+    background:green;
+}
+    
+    
+
+
+
+   
+/* media queries  */
+ /* @media (max-width:991px)
+{
+    html{
+        font-size:20%;
+        
+    }
+
+}
+@media (max-width:450px)
+{
+    html{
+        font-size:20%;
+        
+    }
+    .heading{
+        font-size: 2.5rem;
+    }
+    .features .box-container .box{
+        height: 200px;
+    }
+    .features .box-container .box img{
+        margin:2rem 0;
+        height:5rem;
+        width: 5rem;
+     }
+
+} */
+
+
+/* For screens smaller than 1200px (e.g., tablets and small desktops) */
+@media (max-width: 1199px) {
+    .home {
+        padding-top: 15rem; /* Adjust padding to fit better on smaller screens */
+    }
+}
+
+/* For screens smaller than 992px (e.g., tablets in landscape mode) */
+@media (max-width: 991px) {
+    .home {
+        padding-top: 10rem; /* Further adjust padding for better spacing */
+    }
+}
+
+/* For screens smaller than 768px (e.g., mobile devices) */
+@media (max-width: 767px) {
+    .home {
+        padding-top: 5rem; /* Reduce padding for mobile devices */
+        background-size: contain; /* Ensure the background image fits within the viewport */
+        /* Optionally, adjust background-position to better fit mobile screens */
+        background-position: top center;
+    }
+}
+
+/* For screens smaller than 576px (e.g., very small devices) */
+@media (max-width: 575px) {
+    .home {
+        padding-top: 3rem; /* Further reduce padding if needed */
+        background-size: cover; /* Ensure the background image covers the viewport */
+    }
+
+    
+}

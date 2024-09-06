@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <style>
+        .highlight{
+            background-color:greenyellow;
+        }
+    </style>
+    <div id="parent">
+    <h1 class="heading">What to buy</h1>
+    <p title="a gendle remainder">Don't forget to buy this stuffs.</p>
+    <ul id="purchases">
+        <li>A tin of beans</li>
+        <li>Cheese</li>
+        <li>Milk</li>
+    </ul>
+</div>
+    <script>
+        const parentDiv=document.getElementById("parent");
+        parentDiv.style.color="red";
+        parentDiv.style.backgroundColor="yellow";
+
+        const purchasesList=document.getElementById("purchases");
+        purchasesList.style.cssText= "color:black;font-size:20px;"
+
+        purchasesList.classList.add("highlight");
+
+        setTimeout(() =>{
+            purchasesList.classList.remove("highlight");  
+        },5000)
+        
+    </script>
+</body>
+</html>

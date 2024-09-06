@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p data-id="789">Item 1</p>
+    <p data-id="234">Item 2</p>
+    <p data-id="567">Item 3</p>
+    <p data-id="8910">Item 4</p>
+
+
+    <script>
+        $("[data-id]").each(function() {
+        console.log($(this).attr("data-id"));
+    });
+    </script>
+</body>
+</html>

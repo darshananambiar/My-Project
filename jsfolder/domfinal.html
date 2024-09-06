@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="parent">
+        <h class="heading">hello </h>
+        <p id="myParagraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, quam.</p>
+       
+    </div>
+    <button id="addButton">add button</button>
+    <button id="removeButton">remove button</button>
+    <script>
+        const parentDiv= document.getElementById("parent");
+        const addButton=document.getElementById("addButton");
+        const removeButton=document.getElementById("removeButton");
+
+        addButton.addEventListener("click" ,function() {
+         const newElement   = document.createElement("p");
+         newElement.textContent = "this is cyber SQuare calicut";
+         parentDiv.appendChild(newElement);
+        });
+
+        removeButton.removeEventListener("click" ,function() {
+         const firstChild  = parentDiv.firstElementChild;
+         parentDiv.removeChild(firstChild);
+        });
+
+        const myParagraph =document.getElementById("myParagraph");
+        myParagraph.setAttribute("heading","this is the first paragraph");
+
+        const titleAttribute = myParagraph.getAttribute("heading");
+        
+        const headingElement= document.querySelectorAll(".heaging");
+        headingElement.innerHTML= "welcome to cyberSquare";
+    </script>
+
+</body>
+</html>

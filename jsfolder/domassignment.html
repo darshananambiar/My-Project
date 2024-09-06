@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .highlight1{
+            background-color:black;
+        }
+
+        .highlight2{
+            background-color: green;
+        }
+        .highlight3{
+            background-color:orange;
+        }
+        .highlight4{
+            background-color:blue;
+        }
+
+
+
+    </style>
+    <div id="div1">
+        <div id="div2">
+            <div id="div3">
+            <div id="div4"></div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const divDom = document.getElementById("div1");
+        divDom.style.border="0px solid white";
+        divDom.style.padding="50px 50px";
+
+        const divDom1 = document.getElementById("div2");
+        divDom1.style.border="0px solid white";
+        divDom1.style.padding="40px 60px";
+
+        const divDom2 = document.getElementById("div3");
+        divDom2.style.border="0px solid white";
+        divDom2.style.padding="30px 70px";
+
+        const divDom3 = document.getElementById("div4");
+        divDom3.style.border="0px solid white";
+        divDom3.style.padding="20px 80px";
+
+        divDom.classList.add("highlight1");
+        divDom1.classList.add("highlight2");
+        divDom2.classList.add("highlight3");
+        divDom3.classList.add("highlight4");
+
+        // setTimeout(() =>{
+        //     divDom.classList.add("highlight1");  
+        // },6000)
+
+        // setTimeout(() =>{
+        //     divDom1.classList.add("highlight2");  
+        // },5000)
+
+        // setTimeout(() =>{
+        //     divDom2.classList.add("highlight3");  
+        // },4000)
+
+        // setTimeout(() =>{
+        //     divDom3.classList.add("highlight4");  
+        // },3000)
+
+        
+
+
+// -------------removing-----------------//
+
+
+
+        setTimeout(() =>{
+            divDom.classList.remove("highlight1");  
+        },3000)
+
+        setTimeout(() =>{
+            divDom1.classList.remove("highlight2");  
+        },4000)
+
+        setTimeout(() =>{
+            divDom2.classList.remove("highlight3");  
+        },5000)
+
+        setTimeout(() =>{
+            divDom3.classList.remove("highlight4");  
+        },6000)
+
+        </script>
+</body>
+</html>

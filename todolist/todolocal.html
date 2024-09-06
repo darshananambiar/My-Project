@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="todo.css">
+</head>
+<body>
+  <div class="container">
+    <input type="text" id="taskInput" placeholder="Add a new task">
+    <button id="addBtn">Add Task</button>
+    <ul id="taskList"></ul>
+</div>
+
+<script type="module">
+  const input = document.getElementById("taskInput");
+  const addBtn = document.getElementById("addBtn");
+  const taskList = document.getElementById("taskList");
+
+   // Function to get tasks from localStorage
+    function getTasks() {
+    const tasks = localStorage.getItem('tasks');
+    return tasks ? JSON.parse(tasks) : [];
+  }
+
+// Function to save tasks to localStorage
+    function saveTasks(tasks) {
+    localStorage.setItem('tasks', JSON.stringify(tasks));
+  }
+
+  // Function to render tasks
+  function renderTasks() {
+    const tasks = getTasks();
+    taskList.innerHTML = '';
+    tasks.forEach(task => addTaskToList(task));
+  }
+
+
+
+
+//   addBtn.addEventListener("click", () => {
+//       const task = input.value.trim();
+//       if (task==="") {
+//           alert("Please enter a task");
+//           return;
+
+//       }
+
+    
+     function addTaskToList(task) {
+      const newlist = document.createElement("li");
+
+      const checkBox = document.createElement("input");
+      checkBox.type = "checkbox";
+      checkBox.checked = task.completed;
+
+
+      const span = document.createElement("span");
+      span.textContent = task.text;
+
+      const delBtn = document.createElement("button");
+      delBtn.textContent = "Delete";
+
+      const editBtn = document.createElement("button");
+      editBtn.textContent = "Edit";
+
+      // Append checkbox, span, and buttons to the new list item
+      newlist.appendChild(checkBox);
+      newlist.appendChild(span);
+      newlist.appendChild(delBtn);
+      newlist.appendChild(editBtn);
+
+      // Append the new list item to the task list
+      taskList.appendChild(newlist);
+
+      // Edit functionality
+      editBtn.addEventListener("click", () => {
+          const newValue = prompt("Edit item:", span.textContent);
+          if (newValue !== null && newValue.trim() !== "") {
+              span.textContent = newValue; // Update the text
+              updateTask(task.id, { ...task, text: newValue });
+          }
+      });
+
+      // Delete functionality
+      delBtn.addEventListener("click", () => {
+          newlist.remove();
+          deleteTask(task.id);
+          
+      });
+      // Toggle checkbox functionality
+    checkBox.addEventListener("change", () => {
+      updateTask(task.id, { ...task, completed: checkBox.checked });
+    });
+
+      
+      delBtn.style.backgroundColor = "red";
+      delBtn.style.width = "70px";
+      delBtn.style.height = "30px";
+      delBtn.style.margin = "5px";
+
+      editBtn.style.backgroundColor = "lightblue";
+      editBtn.style.width = "70px";
+      editBtn.style.height = "30px";
+      editBtn.style.margin = "5px";
+      input.value = '';
+    };
+
+      // Function to add a task
+  function addTask(task) {
+    const tasks = getTasks();
+    tasks.push(task);
+    saveTasks(tasks);
+    addTaskToList(task);
+  }
+
+  // Function to update a task
+  function updateTask(id, updatedTask) {
+    let tasks = getTasks();
+    tasks = tasks.map(task => (task.id === id ? updatedTask : task));
+    saveTasks(tasks);
+  }
+
+  // Function to delete a task
+  function deleteTask(id) {
+    let tasks = getTasks();
+    tasks = tasks.filter(task => task.id !== id);
+    saveTasks(tasks);
+  }
+
+  // Event listener for the Add Task button
+  addBtn.addEventListener("click", () => {
+    const taskText = input.value.trim();
+    if (taskText === "") {
+      alert("Please enter a task");
+      return;
+    }
+
+    const task = {
+      id: Date.now(),
+      text: taskText,
+      completed: false
+    };
+
+    addTask(task);
+    input.value = ''; // Clear the input after adding the task
+  });
+
+  // Initial render
+  renderTasks();
+
+</script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+html{
+    font-size: 10px;
+
+}
+body{
+    font-family: 'Times New Roman', Times, serif;
+    background-color: black;
+    color: white;
+
+}
+/* img {
+    width: 100%;
+
+} */
+a{
+    text-decoration: none;
+    color: white;
+
+}
+.container{
+    max-width:1000px;
+    width: 90%;
+    margin: auto;
+    display: grid;
+    padding: 20px;
+    background-color:black;
+    grid-template-columns: 1fr 1fr;
+    gap: 4 rem;
+}
+.profile{
+    grid-column: 1 / -1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
