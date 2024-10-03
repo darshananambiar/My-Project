@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="todo.css">
+</head>
+<body>
+  <div class="container">
+    <input type="text" id="taskInput" placeholder="Add a new task">
+    <button id="addBtn">Add Task</button>
+    <ul id="taskList"></ul>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script>
+$(document).ready(function() {
+        $('#addBtn').on('click', function() {
+            var task = $('#taskInput').val().trim();
+            if (task === "") {
+                alert("Please enter a task");
+                return;
+            }
+
+            // Create new list item
+            var $newList = $('<li></li>');
+
+            // Create and append checkbox
+            var $checkBox = $('<input>', { type: 'checkbox' });
+            $newList.append($checkBox);
+
+            // Create and append span with task text
+            var $span = $('<span></span>').text(task);
+            $newList.append($span);
+
+            // Create and append delete button
+            var $delBtn = $('<button>Delete</button>').css({
+                'background-color': 'red',
+                'width': '70px',
+                'height': '30px',
+                'margin': '5px'
+            });
+            $delBtn.on('click', function() {
+                $newList.remove();
+            });
+            $newList.append($delBtn);
+
+            // Create and append edit button
+            var $editBtn = $('<button>Edit</button>').css({
+                'background-color': 'lightblue',
+                'width': '70px',
+                'height': '30px',
+                'margin': '5px'
+            });
+            $editBtn.on('click', function() {
+                var newValue = prompt("Edit item:", $span.text());
+                if (newValue !== null && newValue.trim() !== "") {
+                    $span.text(newValue);
+                }
+            });
+            $newList.append($editBtn);
+
+            // Append the new list item to the task list
+            $('#taskList').append($newList);
+
+            // Clear the input after adding the task
+            $('#taskInput').val('');
+        });
+    });
+  </script>
+
+      
+
+      
+</script>
+
+
+
+    
+      
+</body>
+</html>

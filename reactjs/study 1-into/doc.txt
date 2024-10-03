@@ -1,0 +1,155 @@
+Introduction
+
+state- variable
+setstate -change the state
+props-pass state to child components
+lifecycle mthods,example:componentDidMount()-api calling
+routing
+hooks
+
+why should you learn reac
+-----------------------------
+you can write reusable code
+easy to write and maintain
+faster page switching
+it does not refresh
+----------------------------------
+ 
+ install node(npm package in node...which depency in react)
+---------------------
+->open cmd -> node -v -> npm -v ->
+
+install react(create a folder to install the react-->open folder--->cmd-->npx create-react-app my-app-->installed
+without using internet-npm install -g create-react-app-->create-react-app appname
+---------------->
+
+-to create react application
+cd
+TO 
+terminal
+cd "study 1-intro"
+for creating new app
+npx create-react-app my-app 
+-----------------------------------------------------
+cd my-app
+
+to run we have to go to app and type npm start
+npm start
+
+to create a component----> rafce
+
+import Bootstrap from 'react-bootstrap'; (app.js)
+
+
+NEW CREATE NEW APP
+
+import 'bootstrap/dist/css/bootstrap.min.css' (bootstrp cpmponent link)
+
+npm create vite@latest appname
+cd app-name
+npm install
+
+to run--->npm run dev
+
+cd ..
+state
+import {useState}
+
+function App () {
+  const name=useState('sam');
+
+  return (
+    <>
+      <h1>Hello,{name}</h1>
+      <input type="button"  onClick ={value =" Change"/>
+    </>
+  );
+}
+
+export default App
+
+
+npm install bootstrap
+npm install bootstrap-icons
+import 'bootstrap/dist/css/bootstrap.min.css';(app.js)
+
+
+----------------------------------------------------------
+import React, { useState } from 'react';
+import './App.css';
+
+
+// import Counter from './component/Counter'
+
+
+// const App = () => {
+//   return (
+//     <div style={{display:'flex',justifyContent:'center',flexDirection:'column',alignItems:'center' }}>
+//       <h1>COUNTER APP</h1>
+//      <Counter></Counter>
+//     </div>
+//   )
+// }
+
+
+
+function App() {
+  const [name, setName] = useState('sam');
+ 
+
+
+  return (
+    <>
+      <h1>Hello, {name}</h1>
+      <input type="text" name="name" placeholder='name'/>
+      <input 
+        type="button" 
+        onClick={() => setName('darshana')} // Change 'newName' to the desired value
+        value="Change" 
+      />
+       
+    </>
+  );
+}
+
+export default App;
+
+
+
+
+
+
+folder create in the d drive
+1> folder click
+2> cmd
+3> code .
+
+terminal-
+1> npx create-react-app app-name
+2> cd app-name
+3> npm start
+
+components
+components file name start caps.js
+
+
+css in react
+inline
+variable
+external
+module
+
+Events in react--
+-------------------------
+an event is any action that happens on webapp by user
+we can assign a handler
+
+
+
+Key Changes:
+Replaced all class with className.
+Changed the style attribute to be a valid JSX object: style={{ width: '280px' }}.
+Self-closed <hr /> and <img /> tags.
+Changed xlink:href to xlinkHref (React uses camelCase for attributes).
+
+

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    div {
+        width: 500px;
+        height: 500px;
+        padding: 20px;
+        background-color: blue;
+        
+        
+        
+    }
+</style>
+<body>
+    <div >
+        <img src="/image/cart-img-2.png" width="400px" height="400px">
+        
+    </div>
+
+    
+    <button id="fadeIn">fadeIn</button>
+    <button id="fadeOut">fadeOut</button>
+    <button id="fadeTo">fadeTo</button>
+    <button id="fadeToggle">fadeToggle</button>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script> 
+    <script>
+        
+        
+        $(document).ready(function() {
+        
+            
+            $("#fadeIn").click ( ()=>{
+                $("div").fadeIn();
+            }); 
+            
+            $("#fadeOut").click ( ()=>{
+                $("div").fadeOut();
+            }); 
+            $("#fadeTo").click ( ()=>{
+                $("div").fadeTo(1000,0.4);
+            }); 
+            $("#fadeToggle").click ( ()=>{
+                $("div").fadeToggle();
+        });
+
+    });
+       </script>     
+    
+</body>
+</html>

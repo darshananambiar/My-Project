@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var data=[1,2,3,4,5,6];
+        var doubledData = data.map(x => x * 2);
+        console.log(doubledData);
+
+        const users = [
+            { age: 18, name: 'abc' },
+            { age: 20, name: 'xyz' },
+            { age: 30, name: 'lpm' },
+            { age: 350, name: 'rpm' }
+        ];
+        const userNames = users.map(user => user.name);
+        const userAge = users.map(user => user.age);
+
+        console.log(userNames); 
+        console.log(userAge);
+    </script>
+</body>
+</html>

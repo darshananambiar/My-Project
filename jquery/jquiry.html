@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    div {
+        padding: 10px;
+        margin: 15px;
+    }
+
+    .red {
+        width: 500px;
+        height: 500px;
+
+        background-color: red;
+
+        border-radius: 50%;
+
+    }
+
+    #div2 {
+        width: 450px;
+        height: 450px;
+        background-color: orange;
+        /* position: relative; */
+        border-radius: 50%;
+
+    }
+
+    #div3 {
+        width: 400px;
+        height: 400px;
+        background-color: yellow;
+        /* position: relative; */
+        border-radius: 50%;
+
+    }
+
+    #div4 {
+        width: 350px;
+        height: 350px;
+        background-color: violet;
+        /* position: relative; */
+        border-radius: 50%;
+
+    }
+
+    .newstyle {
+        height: 500px;
+        width: 500px;
+        background-color: green;
+
+    }
+</style>
+
+<body>
+    <div id="div1" class="red">
+        <div id="div2">
+            <div id="div3">
+                <div id="div4">
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <button id="remove">remove</button>
+    <button id="empty">empty</button>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {
+            $("#remove").click(() => {
+                $("#div4").remove();
+            });
+
+            $('#empty').click(() => {
+
+                $('#empty').click(() => {
+                    $('#div1').empty();
+                    $('#div1').removeClass('red');
+                    $('#div1').addClass("newstyle");
+                })
+
+            })
+
+        });
+    </script>
+
+</body>
+
+</html>
